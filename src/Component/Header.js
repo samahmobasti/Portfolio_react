@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import './Header.css'
-
+import {BrowserRouter as Router ,Route ,Switch, NavLink} from 'react-router-dom'
 
 const Headr = styled.div
 `
@@ -27,18 +27,18 @@ function Header() {
               <div>
          <Headr>
          <Logo>
-        <Lien href="#">
+        <NavLink to= "/PageOne">
             <h1>MOBASTI Samah</h1>
             <span>Full stack js Developer</span>
-        </Lien>
+        </NavLink>
         </Logo>
     
         <nav class="menu-bar">
          <ul>
-              <li class="HOME"><Lien href="#HOME"> RESUME</Lien></li>
-              <li><Lien href="#RESUME"> RESUME</Lien></li>
-                <li><Lien href="#PROJECTS">PROJECTS</Lien></li>
-                <li><Lien href="#CONTACT">CONTACT</Lien></li>
+              <li class="HOME"><NavLink to='/PageOne'> Home</NavLink></li>
+              <li><NavLink to='/Pagetwo'> Resume</NavLink></li>
+                {/* <li><Lien href="#PROJECTS">PROJECTS</Lien></li>
+                <li><Lien href="#CONTACT">CONTACT</Lien></li> */}
 
     
         </ul>

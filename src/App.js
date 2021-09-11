@@ -1,16 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Component/Header';
-import Main from './Component/Main';
-import Footer from './Component/Footer';
 
+import Header from './Component/Header';
+import {BrowserRouter as Router ,Route ,Switch, NavLink} from 'react-router-dom'
+import PageOne from './Pages/PageOne.js'
+import Pagetwo from './Pages/Pagetwo.js'
 function App() {
   return (
     <div className="App">
-   <Header/>
-   <Main className="main"/>
-   <Footer/>
+    <Router>
+   {/* <Header/> */}
+ <Switch>
+ 
+   <Route path='/Pagetwo' component={Pagetwo}/>
+   <Route path='/' component={PageOne}/>
 
+
+   </Switch>
+   </Router>
     </div>
   );
 }
